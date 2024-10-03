@@ -129,7 +129,7 @@ html, body {
 
 @media (max-width: 1200px) {
     #home {
-        height: 60vh;
+        height: 0vh;
     }
     #home h1, #home h3 {
         font-size: 2rem;
