@@ -165,7 +165,7 @@ html, body {
     }
     #home .profile-img-wrapper {
         width: 100%;
-        margin-top: 20px; /* Add margin to separate from text */
+        margin-top: 10px; /* Add margin to separate from text */
         height: 40%; /* Increase height of carousel */
     }
 }
