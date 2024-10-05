@@ -7,11 +7,9 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
 * {
     box-sizing: border-box;
 }
-
 #home {
     background: linear-gradient(to right, #0047ab, #164f9f, #6e2dc3, #824ac9);
     color: white;
@@ -22,7 +20,6 @@ html, body {
     justify-content: space-between;
     text-align: left;
 }
-
 #home .content {
     z-index: 2;
     display: flex;
@@ -30,7 +27,6 @@ html, body {
     width: 100%;
     height: 100%; 
 }
-
 #home .text-content {
     flex: 2; 
     display: flex;
@@ -40,29 +36,24 @@ html, body {
     text-align: center; 
     padding: 20px;
 }
-
 #home h1, #home h3, #home p {
     font-size: 2.5rem;
     white-space: nowrap;
     overflow: hidden;
     animation: typewriter 2s steps(20, end) 0.5s 1 normal both;
 }
-
 #home h1 {
     color: #38e5a2;
 }
-
 #home h3 {
     color: #ed2b4e;
     animation: typewriter 2.5s steps(30, end) 2.5s 1 normal both;
 }
-
 #home p {
     font-size: 1.2rem;
     color: white;
     animation: fadeInText 1s ease-in-out 6s forwards;
 }
-
 @keyframes typewriter {
     from {
         width: 0;
@@ -71,7 +62,6 @@ html, body {
         width: 100%;
     }
 }
-
 @keyframes fadeInText {
     0% {
         opacity: 0;
@@ -80,7 +70,6 @@ html, body {
         opacity: 1;
     }
 }
-
 #home .profile-img-wrapper {
     flex: 1;
     display: inline-block;
@@ -89,26 +78,21 @@ html, body {
     position: relative;
     height: 100%; 
 }
-
 #home .profile-img-wrapper .profile-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 #home .carousel-control-prev, 
 #home .carousel-control-next {
     width: 10%;
 }
-
 #home .profile-img-wrapper .carousel-item img {
     box-shadow: none;
 }
-
 #home .carousel-indicators {
     bottom: -20px; 
 }
-
 #home .btn-contact {
     background-color: #16b7b4;
     color: white;
@@ -122,11 +106,9 @@ html, body {
     max-width: 300px; 
     text-align: center;
 }
-
 #home .btn-contact:hover {
     background-color: #0591a7;
 }
-
 @media (max-width: 1200px) {
     #home {
         height: 0vh;
@@ -138,7 +120,6 @@ html, body {
         font-size: 1rem;
     }
 }
-
 @media (max-width: 768px) {
     #home {
         height: 100vh; /* Increase height for the #home section */
@@ -169,7 +150,6 @@ html, body {
         height: 40%; /* Increase height of carousel */
     }
 }
-
 @media (max-width: 576px) {
     #home {
         height: 100vh; /* Increase height for smaller screens */
@@ -222,6 +202,7 @@ body {
     width: 100%;
     max-width: 100%; 
     text-align: center;
+    border-radius: 40px 40px 0 0;
 }
 
 .about-text-box {
