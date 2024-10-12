@@ -48,6 +48,22 @@
 </nav>
 <!-- Navbar end -->
 
+<div id="stars">
+    <!-- These will be dynamically generated stars -->
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+</div>
+
 
 <!-- Home -->
 <section id="home">
@@ -100,7 +116,7 @@
 <section id="about" class="container my-2">
     <h2 class="text-center mb-2">Who I Am</h2>
     <div class="about-image-box">
-        <img src="images/IMG_20221012_162855-min.png" alt="Developer" class="about-image img-fluid">
+        <img src="images/Profile-image.png" alt="Developer" class="about-image img-fluid">
     </div>
     
     <div class="about-text-box">
@@ -117,46 +133,46 @@
 <section id="services" class="services-section py-2">
     <div class="container">
         <h2 class="text-center mb-5">My Professional Services</h2>
-        <div class="row justify-content-center"> <!-- Center the row content -->
+        <div class="row justify-content-center">
             <!-- Service 1 -->
             <div class="col-lg-3 col-md-6 mb-4 d-flex justify-content-center">
-                <div class="service-box">
-                    <img src="images/web-design.webp" alt="Web Design">
-                    <h4>Website designing & development</h4>
-                    <p>Crafting responsive, user-focused websites that merge aesthetics with seamless functionality.</p>
+                <div class="service-box text-center">
+                    <img src="images/web-design.webp" alt="Web Design" class="img-fluid">
+                    <h4 class="service-title">Website Designing & Development</h4>
+                    <p class="service-description">Crafting responsive, user-focused websites that merge aesthetics with seamless functionality.</p>
                 </div>
             </div>
 
             <!-- Service 2 -->
             <div class="col-lg-3 col-md-6 mb-4 d-flex justify-content-center">
-                <div class="service-box">
-                    <img src="images/Graphic designing.webp" alt="Graphic Designing">
-                    <h4>Graphic designing</h4>
-                    <p>Bringing ideas to life with bold, creative visuals that leave a lasting impression.</p>
+                <div class="service-box text-center"> <!-- Added text-center for consistency -->
+                    <img src="images/Graphic designing.jpg" alt="Graphic Designing" class="img-fluid"> <!-- Added img-fluid for responsive images -->
+                    <h4 class="service-title">Graphic Designing</h4>
+                    <p class="service-description">Bringing ideas to life with bold, creative visuals that leave a lasting impression.</p>
                 </div>
             </div>
 
             <!-- Service 3 -->
             <div class="col-lg-3 col-md-6 mb-4 d-flex justify-content-center">
-                <div class="service-box">
-                    <img src="images/Digital Marketing.webp" alt="Digital Marketing">
-                    <h4>Digital Marketing</h4>
-                    <p>Driving engagement and growth through tailored strategies that reach the right audience.</p>
+                <div class="service-box text-center"> <!-- Added text-center for consistency -->
+                    <img src="images/Digital Marketing.webp" alt="Digital Marketing" class="img-fluid"> <!-- Added img-fluid for responsive images -->
+                    <h4 class="service-title">Digital Marketing</h4>
+                    <p class="service-description">Driving engagement and growth through tailored strategies that reach the right audience.</p>
                 </div>
             </div>
 
             <!-- Service 4 -->
             <div class="col-lg-3 col-md-6 mb-4 d-flex justify-content-center">
-                <div class="service-box">
-                    <img src="images/Professional social media Video editing.webp" alt="Video Editing">
-                    <h4>Professional social media Video editing</h4>
-                    <p>Creating dynamic, captivating videos that boost visibility and connect with your audience.</p>
+                <div class="service-box text-center"> <!-- Added text-center for consistency -->
+                    <img src="images/Professional social media Video editing.webp" alt="Video Editing" class="img-fluid"> <!-- Added img-fluid for responsive images -->
+                    <h4 class="service-title">Professional Social Media Video Editing</h4>
+                    <p class="service-description">Creating dynamic, captivating videos that boost visibility and connect with your audience.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Services end --> 
+<!-- Services end -->
 
 
 <!-- Skill start -->
@@ -260,12 +276,13 @@
             <!-- Project 1 -->
             <div class="col-md-4 mb-4">
                 <div class="card shadow border-0 h-100">
-                    <img src="images/Screenshot 2024-09-29 140853.png" alt="Project 1 image" class="card-img-top">
+                    <img src="images/portfolio_web.png" alt="Portfolio Website" class="card-img-top img-fluid">
                     <div class="card-body text-center">
                         <h5 class="card-title text-primary">Portfolio Website</h5>
-                        <p class="card-text text-light"> A personal portfolio website to showcase skills and projects, featuring a responsive design and a user-friendly interface.</p>
-                        <a href="www.example.com/portfolio" target="_blank" class="btn btn-primary btn-equal download-link mb-2">Project Link</a>
-                        <a href="https://project-detail-link1.com" class="btn btn-secondary btn-equal mb-2">Project Detail</a>
+                        <p class="card-text text-light">A personal portfolio website to showcase skills and projects, featuring a responsive design and a user-friendly interface.</p>
+                        <div class="button-group"> <!-- Added container for buttons -->
+                            <a href="https://www.example.com/portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-primary download-link">Project Link</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -273,12 +290,13 @@
             <!-- Project 2 -->
             <div class="col-md-4 mb-4">
                 <div class="card shadow border-0 h-100">
-                    <img src="images/Screenshot 2024-09-29 234921.png" alt="Project 2 image" class="card-img-top">
+                    <img src="images/Screenshot 2024-09-29 234921.png" alt="E-commerce Store" class="card-img-top img-fluid">
                     <div class="card-body text-center">
                         <h5 class="card-title text-primary">E-commerce Store</h5>
                         <p class="card-text text-light">An online store built with Django and Bootstrap, allowing users to browse products, add items to their cart, and make secure purchases.</p>
-                        <a href="www.example.com/store" target="_blank" class="btn btn-primary btn-equal download-link mb-2">Project Link</a>
-                        <a href="https://project-detail-link2.com" class="btn btn-secondary btn-equal mb-2">Project Detail</a>
+                        <div class="button-group"> <!-- Added container for buttons -->
+                            <a href="https://www.example.com/store" target="_blank" rel="noopener noreferrer" class="btn btn-primary download-link">Project Link</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -286,12 +304,13 @@
             <!-- Project 3 -->
             <div class="col-md-4 mb-4">
                 <div class="card shadow border-0 h-100">
-                    <img src="images/blog-design.webp" alt="Project 3 image" class="card-img-top">
+                    <img src="images/blog-design.webp" alt="Blog Platform" class="card-img-top img-fluid">
                     <div class="card-body text-center">
                         <h5 class="card-title text-primary">Blog Platform</h5>
                         <p class="card-text text-light">A blogging platform that enables users to create, edit, and share blog posts, with a clean design and easy navigation.</p>
-                        <a href="www.example.com/blog" target="_blank" class="btn btn-primary btn-equal download-link mb-2">Project Link</a>
-                        <a href="https://project-detail-link3.com" class="btn btn-secondary btn-equal mb-2">Project Detail</a>
+                        <div class="button-group"> <!-- Added container for buttons -->
+                            <a href="https://www.example.com/blog" target="_blank" rel="noopener noreferrer" class="btn btn-primary download-link">Project Link</a>
+                        </div>
                     </div>
                 </div>
             </div>

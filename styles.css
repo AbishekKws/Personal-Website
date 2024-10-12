@@ -1,17 +1,164 @@
+/* Flying Stars Background */
+#stars {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none; /* Disable interaction with stars */
+}
 
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px white;
+    animation: flyStar 10s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes flyStar {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(calc(100vw - 50px)) translateY(calc(100vh - 50px));
+    }
+}
+
+/* Generating different sizes and speeds for stars */
+.star:nth-child(1) {
+    width: 4px;
+    height: 4px;
+    top: 10%;
+    left: 15%;
+    animation-duration: 8s;
+    animation-delay: -1s;
+}
+.star:nth-child(2) {
+    width: 6px;
+    height: 6px;
+    top: 25%;
+    left: 70%;
+    animation-duration: 12s;
+    animation-delay: -2s;
+}
+.star:nth-child(3) {
+    width: 3px;
+    height: 3px;
+    top: 40%;
+    left: 25%;
+    animation-duration: 15s;
+    animation-delay: -3s;
+}
+.star:nth-child(4) {
+    width: 5px;
+    height: 5px;
+    top: 50%;
+    left: 60%;
+    animation-duration: 10s;
+    animation-delay: -4s;
+}
+.star:nth-child(5) {
+    width: 2px;
+    height: 2px;
+    top: 70%;
+    left: 40%;
+    animation-duration: 14s;
+    animation-delay: -5s;
+}
+.star:nth-child(6) {
+    width: 7px;
+    height: 7px;
+    top: 85%;
+    left: 30%;
+    animation-duration: 9s;
+    animation-delay: -6s;
+}
+.star:nth-child(7) {
+    width: 8px;
+    height: 8px;
+    top: 15%;
+    left: 50%;
+    animation-duration: 7s;
+    animation-delay: -7s;
+}
+.star:nth-child(8) {
+    width: 3.5px;
+    height: 3.5px;
+    top: 90%;
+    left: 20%;
+    animation-duration: 10s;
+    animation-delay: -8s;
+}
+.star:nth-child(9) {
+    width: 5px;
+    height: 5px;
+    top: 35%;
+    left: 80%;
+    animation-duration: 13s;
+    animation-delay: -9s;
+}
+.star:nth-child(10) {
+    width: 6.5px;
+    height: 6.5px;
+    top: 60%;
+    left: 90%;
+    animation-duration: 11s;
+    animation-delay: -10s;
+}
+.star:nth-child(11) {
+    width: 9px;
+    height: 9px;
+    top: 5%;
+    left: 5%;
+    animation-duration: 15s;
+    animation-delay: -11s;
+}
+.star:nth-child(12) {
+    width: 4px;
+    height: 4px;
+    top: 50%;
+    left: 85%;
+    animation-duration: 12s;
+    animation-delay: -12s;
+}
+/* Flying Stars Background end */
 
 
 /* Home css start */
 html, body {
     height: 100%;
-    margin: 0;
     padding: 0;
 }
+
 * {
     box-sizing: border-box;
 }
+
+/* Global Background Gradient */
+body {
+    background: linear-gradient(to right, 
+        #0047ab, /* Deep Blue */
+        #0058b7, /* Intermediate Shade 1 */
+        #0068c2, /* Intermediate Shade 2 */
+        #0079ce, /* Intermediate Shade 3 */
+        #008ae0, /* Intermediate Shade 4 */
+        #009be3, /* Intermediate Shade 5 */
+        #00abef, /* Intermediate Shade 6 */
+        #0f9de3, /* Intermediate Shade 7 */
+        #1c90d5, /* Intermediate Shade 8 */
+        #2b93c8, /* Intermediate Shade 9 */
+        #3a96bc, /* Intermediate Shade 10 */
+        #4a99b0, /* Intermediate Shade 11 */
+        #5a9ca3, /* Intermediate Shade 12 */
+        #164f9f  /* Final Color */
+    );
+    background-size: 300% 300%; /* Adjust size for more flow effect */
+    animation: flowingWater 12s ease-in-out infinite; /* Flowing water animation */
+}
+
 #home {
-    background: linear-gradient(to right, #0047ab, #164f9f, #6e2dc3, #824ac9);
     color: white;
     padding: 0;
     position: relative;
@@ -20,6 +167,16 @@ html, body {
     justify-content: space-between;
     text-align: left;
 }
+
+/* Keyframes for flowing water animation */
+@keyframes flowingWater {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 100% 50%; }
+    50% { background-position: 0% 50%; }
+    75% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 #home .content {
     z-index: 2;
     display: flex;
@@ -27,6 +184,7 @@ html, body {
     width: 100%;
     height: 100%; 
 }
+
 #home .text-content {
     flex: 2; 
     display: flex;
@@ -36,24 +194,29 @@ html, body {
     text-align: center; 
     padding: 20px;
 }
+
 #home h1, #home h3, #home p {
     font-size: 2.5rem;
     white-space: nowrap;
     overflow: hidden;
     animation: typewriter 2s steps(20, end) 0.5s 1 normal both;
 }
+
 #home h1 {
     color: #38e5a2;
 }
+
 #home h3 {
     color: #ed2b4e;
     animation: typewriter 2.5s steps(30, end) 2.5s 1 normal both;
 }
+
 #home p {
     font-size: 1.2rem;
     color: white;
     animation: fadeInText 1s ease-in-out 6s forwards;
 }
+
 @keyframes typewriter {
     from {
         width: 0;
@@ -62,6 +225,7 @@ html, body {
         width: 100%;
     }
 }
+
 @keyframes fadeInText {
     0% {
         opacity: 0;
@@ -70,6 +234,7 @@ html, body {
         opacity: 1;
     }
 }
+
 #home .profile-img-wrapper {
     flex: 1;
     display: inline-block;
@@ -78,21 +243,26 @@ html, body {
     position: relative;
     height: 100%; 
 }
+
 #home .profile-img-wrapper .profile-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 #home .carousel-control-prev, 
 #home .carousel-control-next {
     width: 10%;
 }
+
 #home .profile-img-wrapper .carousel-item img {
     box-shadow: none;
 }
+
 #home .carousel-indicators {
     bottom: -20px; 
 }
+
 #home .btn-contact {
     background-color: #16b7b4;
     color: white;
@@ -106,9 +276,11 @@ html, body {
     max-width: 300px; 
     text-align: center;
 }
+
 #home .btn-contact:hover {
     background-color: #0591a7;
 }
+
 @media (max-width: 1200px) {
     #home {
         height: 0vh;
@@ -120,6 +292,7 @@ html, body {
         font-size: 1rem;
     }
 }
+
 @media (max-width: 768px) {
     #home {
         height: 100vh; /* Increase height for the #home section */
@@ -150,6 +323,7 @@ html, body {
         height: 40%; /* Increase height of carousel */
     }
 }
+
 @media (max-width: 576px) {
     #home {
         height: 100vh; /* Increase height for smaller screens */
@@ -181,28 +355,20 @@ html, body {
 }
 /* Home css end */
 
-
 /* About css start */
-body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, #0047ab, #164f9f, #6e2dc3, #824ac9);
-}
-
 #about {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: transparent; /* Make the background transparent */
 }
 
 .about-image-box {
-    background-color: rgba(160, 159, 159, 0.8);
+    background-color: rgba(88, 83, 83, 0.8);
     width: 100%;
     max-width: 100%; 
     text-align: center;
-    border-radius: 40px 40px 0 0;
 }
 
 .about-text-box {
@@ -261,26 +427,33 @@ h2 {
 /* About css end */
 
 
-/* Services css start */
+/* Services CSS Start */
 .services-section {
-    background: linear-gradient(to right, #0047ab, #164f9f, #6e2dc3, #824ac9);
+    background-color: transparent;
     color: white;
     padding: 50px 0;
 }
 
 .service-box {
-    background-color: #3e4a5a;
-    padding: 20px;
+    background-color: rgba(61, 58, 58, 0.7);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 350px;
-    width: 300px;
+    width: 320px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin: 15px;
+    margin: 5px;
+    text-align: center;
+}
+
+.service-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin: 0;
 }
 
 .service-box:hover {
@@ -288,157 +461,114 @@ h2 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.service-box h4 {
-    font-weight: 600;
-    margin-bottom: 5px;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.service-box p {
-    font-size: 14px;
-    margin-bottom: 15px;
-    color: #d1d1d1;
-    max-height: 60px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
-}
-
-.service-box img {
-    border: 5px solid #ffffff;
-    width: 150px;
-    height: 150px; 
-    object-fit: cover;
-    border-radius: 50%; 
-    margin-bottom: 15px;
-}
-
-h2 {
-    font-family: 'Poppins', sans-serif;
-    color: white;
+.service-title {
+    font-size: 20px;
     font-weight: bold;
+    margin-top: 25px;
 }
 
-h4 {
-    font-family: 'Poppins', sans-serif;
+.service-description {
+    font-size: 16px;
+    margin-top: 5px;
+    flex-grow: 1;
 }
-/* Services css end */
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .service-box {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+/* Services CSS End */
 
 
 /* Skill css start */
 .skills-section {
-    background: linear-gradient(to right, #0047ab, #164f9f, #6e2dc3, #824ac9);
+    background-color: transparent; 
     color: white;
 }
 
-.card {
-    background-color: #333;
-    border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: auto;
-    width: 100%;
+.skill-box {
+    background-color: rgba(79, 77, 77, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.skill-box:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card h4 {
-    margin-bottom: 1.5rem;
-}
-
-h2 {
-    font-family: 'Poppins', sans-serif;
+.skill-title {
+    font-size: 24px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
-h4 {
-    font-family: 'Poppins', sans-serif;
+.skill-description {
+    font-size: 16px;
 }
 
-ul {
-    padding-left: 20px;
-}
-
-ul ul {
-    padding-left: 20px;
-}
-
-@media (min-width: 992px) {
-    .card {
-        height: auto;
+@media (max-width: 768px) {
+    .skill-box {
+        width: 90%; 
     }
 }
 /* Skill css end */
 
 
-/* Projects CSS Start */
-body {
-    background: linear-gradient(to right, #0047ab, #164f9f, #6e2dc3, #824ac9);
-    color: #ffffff;
-}
 
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-    border-radius: 4px 4px 0 0;
+/* Projects CSS Start */
+.projects-section {
+    background-color: transparent;
+    color: white;
+    padding: 50px 0;
 }
 
 .card {
-    height: 100%;
-    background-color: #3d3a3a;
+    background-color: rgba(61, 58, 58, 0.7);
     border: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-    min-height: 150px; 
-    padding: 20px;
+.card-img-top {
+    object-fit: cover;
+    height: 200px; 
 }
 
 .card-title {
-    font-size: 1.25rem; 
-    font-weight: 700;
-    color: #ffcc00;
-    margin-bottom: 15px;
+    font-size: 1.5rem; 
+    margin: 10px 0; 
+}
+
+.card-body {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 100%; 
 }
 
 .card-text {
     font-size: 1rem;
-    max-height: 70px; 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box; 
-    -webkit-box-orient: vertical;
-    color: #ffffff;
+    flex-grow: 1;
+    margin-bottom: 10px;
 }
 
-.btn-equal {
-    margin-top: auto; 
-    padding: 10px 20px; 
-    font-size: 1rem;
+.btn {
+    margin: 8px 0;
 }
-
-.card-no-image {
-    height: 200px; 
-    background-color: #e0e0e0; 
+.button-group {
     display: flex;
-    align-items: center; 
     justify-content: center;
-    color: #3d3a3a;
-    border-radius: 4px 4px 0 0; 
-    font-size: 1.1rem; 
+    gap: 8px;
 }
 /* Projects CSS End */
