@@ -1,3 +1,13 @@
+/* Custom styles */
+.navbar {
+    background-color: royalblue;
+    padding: 10px 0;
+}
+.navbar-nav .nav-link {
+    font-size: 0.9rem;
+}
+
+
 /* Flying Stars Background */
 #stars {
     position: absolute;

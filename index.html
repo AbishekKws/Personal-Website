@@ -10,46 +10,48 @@
 </head>
 <body>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: royalblue; padding: 10px 0;">
-    <div class="container d-flex justify-content-between">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: royalblue; padding: 10px 0;">
+        <div class="container d-flex justify-content-between">
             <img src="images/logo.png" alt="Logo" style="height: 35px; width: 35px; border-radius: 50%;">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse justify-content-center text-uppercase" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link text-white mx-2" href="#home" id="link-home" style="font-size: 0.9rem;">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white mx-2" href="#about" id="link-about" style="font-size: 0.9rem;">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white mx-2" href="#services" id="link-services" style="font-size: 0.9rem;">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white mx-2" href="#skill" id="link-skills" style="font-size: 0.9rem;">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white mx-2" href="#projects" id="link-projects" style="font-size: 0.9rem;">Projects</a>
-                </li>
-            </ul>
-        </div>
-        <div class="d-none d-lg-block">
-            <a href="mailto:abishekkws521@gmail.com" class="text-white" style="font-size: 1rem;">
-                <i class="fas fa-envelope"></i> abishekkws521@gmail.com
-            </a>
-        </div>
-    </div>
-</nav>
-<!-- Navbar end -->
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse justify-content-center text-uppercase" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white mx-2" href="#home" id="link-home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white mx-2" href="#about" id="link-about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white mx-2" href="#services" id="link-services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white mx-2" href="#skill" id="link-skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white mx-2" href="#projects" id="link-projects">Projects</a>
+                    </li>
+                </ul>
+            </div>
 
+            <div class="d-none d-lg-block">
+                <a href="mailto:abishekkws521@gmail.com" class="text-white" style="font-size: 1rem;">
+                    <i class="fas fa-envelope"></i> abishekkws521@gmail.com
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+
+<!-- Stars start-->
 <div id="stars">
-    <!-- These will be dynamically generated stars -->
     <div class="star"></div>
     <div class="star"></div>
     <div class="star"></div>
@@ -63,6 +65,7 @@
     <div class="star"></div>
     <div class="star"></div>
 </div>
+<!-- Stars end-->
 
 
 <!-- Home -->
@@ -80,19 +83,19 @@
                 <!-- Carousel items -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block profile-img" src="images/carousel item 1.webp" alt="First slide">
+                        <img class="d-block profile-img" src="images/carousel item 1.png" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block profile-img" src="images/carousel item 2.jpg" alt="Second slide">
+                        <img class="d-block profile-img" src="images/carousel item 2.png" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block profile-img" src="images/carousel item 3.jpg" alt="Third slide">
+                        <img class="d-block profile-img" src="images/carousel item 3.png" alt="Third slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block profile-img" src="images/carousel item 4.webp" alt="Fourth slide">
+                        <img class="d-block profile-img" src="images/carousel item 4.png" alt="Fourth slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block profile-img" src="images/carousel item 5.jpeg" alt="Fifth slide">
+                        <img class="d-block profile-img" src="images/carousel item 5.png" alt="Fifth slide">
                     </div>
                 </div>
 
@@ -348,15 +351,24 @@
 </footer>
 <!-- Footer end -->
 
+
 <script>
-    // Get the current year
-    const currentYear = new Date().getFullYear();
-    // Set the year in the copyright span
-    document.getElementById('currentYear').textContent = currentYear;
+    document.addEventListener('DOMContentLoaded', function () {
+        const currentYear = new Date().getFullYear();
+        document.getElementById('currentYear').textContent = currentYear;
+
+
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        navLinks.forEach(function (navLink) {
+            navLink.addEventListener('click', function () {
+                navbarCollapse.classList.remove('show');
+            });
+        });
+    });
 </script>
 
 
-<!-- jQuery (full version), then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
